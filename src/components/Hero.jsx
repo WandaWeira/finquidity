@@ -2,6 +2,13 @@ import React from "react";
 import AbstractImages from "./AbstractImages";
 
 const FinquidityLanding = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#f3efd7] px-4 sm:px-8 md:px-16 py-6 md:py-12 relative overflow-hidden">
       {/* Abstract Images */}
@@ -54,29 +61,38 @@ const FinquidityLanding = () => {
 
         {/* Navigation Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-20 mt-16 md:mt-32 max-w-7xl mx-auto px-4">
-          <div className="flex items-center gap-4">
-            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-extralight">
+          <div
+            className="flex items-center gap-4 cursor-pointer group"
+            onClick={() => scrollToSection("ideal-clients")}
+          >
+            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-extralight group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               ↓
             </span>
-            <h3 className="text-2xl md:text-5xl text-black font-extralight">
+            <h3 className="text-2xl md:text-5xl text-black font-extralight group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               Ideal Client...
             </h3>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-thin">
+          <div
+            className="flex items-center gap-4 cursor-pointer group"
+            onClick={() => scrollToSection("who-we-are")}
+          >
+            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-thin group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               ↓
             </span>
-            <h3 className="text-2xl md:text-5xl text-black font-extralight">
+            <h3 className="text-2xl md:text-5xl text-black font-extralight group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               We Are...
             </h3>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-extralight">
+          <div
+            className="flex items-center gap-4 cursor-pointer group"
+            onClick={() => scrollToSection("services")}
+          >
+            <span className="transform -rotate-45 text-3xl md:text-5xl text-black font-extralight group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               ↓
             </span>
-            <h3 className="text-2xl md:text-5xl text-black font-extralight">
+            <h3 className="text-2xl md:text-5xl text-black font-extralight group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
               What we do...
             </h3>
           </div>
