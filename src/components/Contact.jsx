@@ -7,6 +7,7 @@ import {
   Clock,
   Circle,
 } from "lucide-react";
+import AbstractImages from "./AbstractImages";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,33 +27,36 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f3efd7] px-32 py-20 relative overflow-hidden">
-      {/* Artistic header with dynamic elements */}
-      <div className="relative mb-40">
-        <span className="text-[20rem] font-light leading-none opacity-5 absolute -top-32 -left-20 select-none">
+    <div className="min-h-screen bg-[#f3efd7] px-4 sm:px-8 md:px-32 py-10 md:py-20 relative overflow-hidden">
+      {/* Artistic header */}
+      <div className="relative mb-20 md:mb-40">
+        <span className="text-8xl md:text-[20rem] font-light leading-none opacity-5 absolute -top-8 md:-top-32 -left-4 md:-left-20 select-none">
           06
         </span>
         <div className="relative z-10">
-          <div className="flex items-baseline gap-4 mb-8">
-            <Circle className="w-4 h-4 opacity-30" />
-            <h2 className="text-[8rem] font-light leading-none">Let's</h2>
+          <div className="flex items-baseline gap-4 mb-4 md:mb-8">
+            <Circle className="w-3 md:w-4 h-3 md:h-4 opacity-30" />
+            <h2 className="text-4xl md:text-[8rem] font-light leading-none">
+              Let's
+            </h2>
           </div>
-          <div className="flex items-baseline gap-4 ml-40">
-            <Circle className="w-4 h-4 opacity-30" />
-            <h2 className="text-[8rem] font-light leading-none">Connect</h2>
+          <div className="flex items-baseline gap-4 ml-8 md:ml-40">
+            <Circle className="w-3 md:w-4 h-3 md:h-4 opacity-30" />
+            <h2 className="text-4xl md:text-[8rem] font-light leading-none">
+              Connect
+            </h2>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-96 h-96 border border-black/10 rounded-full opacity-20 -z-10"></div>
       </div>
 
-      {/* Main content grid with enhanced artistic layout */}
-      <div className="grid grid-cols-12 gap-16">
-        {/* Left column - Contact form */}
-        <div className="col-span-7">
+      {/* Main content grid */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+        {/* Contact form */}
+        <div className="md:col-span-7">
           <div className="relative group">
-            <div className="bg-black/5 p-16 transform group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform">
-              <form onSubmit={handleSubmit} className="space-y-12">
-                <div className="grid grid-cols-2 gap-12">
+            <div className="bg-black/5 p-6 md:p-16 transform group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform">
+              <form onSubmit={handleSubmit} className="space-y-8 md:space-y-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="space-y-2 relative">
                     <Circle className="w-2 h-2 opacity-30 absolute -left-4 top-8" />
                     <label className="text-sm uppercase tracking-wider opacity-60">
@@ -113,8 +117,8 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right column - Contact information */}
-        <div className="col-span-5 space-y-24 pt-20">
+        {/* Contact information */}
+        <div className="md:col-span-5 space-y-12 md:space-y-24 pt-8 md:pt-20">
           <div className="relative group">
             <span className="text-9xl font-light opacity-5 absolute -top-20 -left-20 select-none">
               01

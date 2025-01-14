@@ -1,17 +1,28 @@
 import React from "react";
 import { ArrowDownRight } from "lucide-react";
+import AbstractImages from "./AbstractImages";
 
 const Services = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#f3efd7] px-32 py-20">
-      <div className="flex flex-row justify-between flex-grow mb-10">
+    <div className="flex flex-col min-h-screen bg-[#f3efd7] px-4 sm:px-8 md:px-32 py-10 md:py-20 relative overflow-hidden">
+      {/* Add abstract image to middle-right */}
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 -z-10">
+        <AbstractImages position="right" variant="3" />
+      </div>
+
+      <div className="flex flex-col lg:flex-row justify-between flex-grow gap-12 lg:gap-0 mb-10">
         {/* Left Section - Who Are... */}
-        <div className="w-[26%]">
-          <div className="flex items-center gap-3 mb-10">
-            <ArrowDownRight className="w-8 h-8 -rotate-45" strokeWidth={1.25} />
-            <h2 className="text-[4rem] font-light leading-none">Who Are...</h2>
+        <div className="w-full lg:w-[26%]">
+          <div className="flex items-center gap-3 mb-6 md:mb-10">
+            <ArrowDownRight
+              className="w-6 h-6 md:w-8 md:h-8 -rotate-45"
+              strokeWidth={1.25}
+            />
+            <h2 className="text-3xl md:text-[4rem] font-light leading-none">
+              Who Are...
+            </h2>
           </div>
-          <div className="space-y-8 text-[1rem] leading-snug">
+          <div className="space-y-4 md:space-y-8 text-base md:text-[1rem] leading-snug">
             <p>
               <span className="font-medium">We are Accountants</span> with a
               passion for the creative world.
@@ -42,22 +53,27 @@ const Services = () => {
         </div>
 
         {/* Center Section - What we do... */}
-        <div className="w-[30%] mt-[20%]">
-          <div className="flex items-center gap-3 mb-12">
-            <ArrowDownRight className="w-8 h-8 -rotate-45" strokeWidth={1.25} />
-            <h2 className="text-[4rem] font-light leading-none">
+        <div className="w-full lg:w-[30%] mt-0 lg:mt-[20%]">
+          <div className="flex items-center gap-3 mb-6 md:mb-12">
+            <ArrowDownRight
+              className="w-6 h-6 md:w-8 md:h-8 -rotate-45"
+              strokeWidth={1.25}
+            />
+            <h2 className="text-3xl md:text-[4rem] font-light leading-none">
               What we do...
             </h2>
           </div>
-          <div className="space-y-10">
-            <p className="text-[1rem]">
+          <div className="space-y-8 md:space-y-10">
+            <p className="text-base md:text-[1rem]">
               We specialise in offering tailored accounting and tax services for
               our clients.
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-[1.15rem] font-medium">Accounting</h3>
-              <ul className="space-y-2 text-[1rem]">
+              <h3 className="text-lg md:text-[1.15rem] font-medium">
+                Accounting
+              </h3>
+              <ul className="space-y-2 text-base md:text-[1rem]">
                 <li>- Management Accounts</li>
                 <li>- Annual Financial Statements</li>
                 <li>- Business pitch prep.</li>
@@ -66,9 +82,11 @@ const Services = () => {
               </ul>
             </div>
 
-            <div className="space-y-4 mt-8">
-              <h3 className="text-[1.15rem] font-medium">Taxation</h3>
-              <ul className="space-y-2 text-[1rem]">
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-[1.15rem] font-medium">
+                Taxation
+              </h3>
+              <ul className="space-y-2 text-base md:text-[1rem]">
                 <li>- International Tax</li>
                 <li>- Personal Tax</li>
                 <li>- Company Tax</li>
@@ -79,20 +97,25 @@ const Services = () => {
         </div>
 
         {/* Right Section - Ideal clients... */}
-        <div className="w-[26%]">
-          <div className="flex items-center gap-3 mb-10">
-            <ArrowDownRight className="w-8 h-8 -rotate-45" strokeWidth={1.25} />
-            <h2 className="text-[4rem] font-light leading-none">
+        <div className="w-full lg:w-[26%]">
+          <div className="flex items-center gap-3 mb-6 md:mb-10">
+            <ArrowDownRight
+              className="w-6 h-6 md:w-8 md:h-8 -rotate-45"
+              strokeWidth={1.25}
+            />
+            <h2 className="text-3xl md:text-[4rem] font-light leading-none">
               Ideal clients...
             </h2>
           </div>
-          <p className="text-[1rem] mb-10">
+          <p className="text-base md:text-[1rem] mb-6 md:mb-10">
             We work with both individuals and companies.
           </p>
 
-          <div className="space-y-4 mb-12">
-            <h3 className="text-[1.15rem] font-medium">Individuals</h3>
-            <ul className="space-y-2 text-[1rem]">
+          <div className="space-y-4 mb-8 md:mb-12">
+            <h3 className="text-lg md:text-[1.15rem] font-medium">
+              Individuals
+            </h3>
+            <ul className="space-y-2 text-base md:text-[1rem]">
               <li>- Stylists</li>
               <li>- Musicians</li>
               <li>- Artists</li>
@@ -103,8 +126,10 @@ const Services = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-[1.15rem] font-medium">Businesses</h3>
-            <ul className="space-y-2 text-[1rem]">
+            <h3 className="text-lg md:text-[1.15rem] font-medium">
+              Businesses
+            </h3>
+            <ul className="space-y-2 text-base md:text-[1rem]">
               <li>- Fashion brands/manufacturers</li>
               <li>- Agencies</li>
               <li>- Media houses</li>
@@ -117,21 +142,10 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      {/* <div className="flex justify-between items-end mb-10 pt-10">
-        <div>
-          <h2 className="text-[4rem] font-light leading-none">
-            Client Directory
-          </h2>
-        </div>
-        <div className="space-y-6">
-          <h2 className="text-[4rem] font-light leading-none">Contact Us</h2>
-          <div className="space-y-2 text-[1rem]">
-            <p>Email: finquidity@gmail.com</p>
-            <p>Call/Text: 0674020561</p>
-          </div>
-        </div>
-      </div> */}
+      {/* Add abstract image to bottom-left */}
+      <div className="absolute bottom-0 left-0 -z-10">
+        <AbstractImages position="left" variant="1" />
+      </div>
     </div>
   );
 };
